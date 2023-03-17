@@ -11,10 +11,10 @@ body {
   display: none;
 }
 
-#content {
+#content, #searchContainer {
   padding-top: 36px;
 }
-#content .card {
+#content .card, #searchContainer .card {
   border-radius: 2.25rem;
   background-image: url(../img/pokeball.png);
   background-size: 50%;
@@ -22,37 +22,34 @@ body {
   box-shadow: 5px 5px 15px -8px rgba(0, 0, 0, 0.64);
   cursor: pointer;
 }
-#content .card img {
+#content .card img, #searchContainer .card img {
   width: 220px;
   transform: translate3d(50px, 69px, 9px);
 }
-#content .card .card-body {
+#content .card .card-body, #searchContainer .card .card-body {
   padding: 4rem 1rem 1rem;
 }
-#content .card .card-body .pokemon-name {
+#content .card .card-body .pokemon-name, #searchContainer .card .card-body .pokemon-name {
   background-color: rgba(255, 255, 255, 0.3490196078);
   border-radius: 24px;
   padding: 16px;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.1019607843);
 }
-#content .card .card-body .pokemon-name h5 {
+#content .card .card-body .pokemon-name h5, #searchContainer .card .card-body .pokemon-name h5 {
   font-weight: 500;
   margin: 0;
 }
-#content .card .card-body .pokemon-name h5::first-letter {
+#content .card .card-body .pokemon-name h5::first-letter, #searchContainer .card .card-body .pokemon-name h5::first-letter {
   text-transform: uppercase;
 }
-#content .card:hover {
+#content .card:hover, #searchContainer .card:hover {
   box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.64);
 }
-#content .card:hover img {
+#content .card:hover img, #searchContainer .card:hover img {
   transform: translate3d(50px, 85px, 9px);
 }
 
-#pokeModal .modal-content {
-  background-color: #94EE94;
-}
 #pokeModal img {
   width: 100%;
   height: auto;
@@ -60,11 +57,14 @@ body {
 #pokeModal .modal-header {
   border: 0px;
 }
+#pokeModal .modal-header h1::first-letter {
+  text-transform: uppercase;
+}
 #pokeModal .modal-body .row {
   justify-content: center;
 }
 #pokeModal .modal-body .card-img {
-  width: 70%;
+  width: 52%;
 }
 #pokeModal .modal-body .typeOfPokemon {
   align-items: center;
@@ -75,14 +75,14 @@ body {
   justify-content: center;
   height: 100%;
 }
-#pokeModal .modal-body .typeOfPokemon .row .toll {
+#pokeModal .modal-body .typeOfPokemon .row .type {
   background-color: rgba(255, 255, 255, 0.356);
   border: 1px solid rgba(46, 46, 46, 0.2);
   padding: 7px;
   margin-right: 3px;
   border-radius: 35px;
   box-shadow: 2px 2px 11px -1px rgba(0, 0, 0, 0.24);
-  margin-top: -32px;
+  margin-top: 0px;
 }
 #pokeModal .modal-header {
   padding-bottom: 0px !important;
@@ -171,6 +171,19 @@ body {
   box-shadow: 0px -3px 15px 2px rgba(0, 0, 0, 0.76);
 }
 
+.navbar {
+  box-shadow: 5px 5px 15px -8px rgba(0, 0, 0, 0.4);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.navbar .navbar-brand {
+  color: black;
+  cursor: default;
+}
+.navbar .navbar-brand img {
+  width: 3rem;
+}
+
 .number {
   position: relative;
 }
@@ -225,4 +238,20 @@ body {
 
 .ghost {
   background-color: rgba(232, 117, 255, 0.336);
+}
+
+.ice {
+  background-color: rgb(140, 253, 234);
+}
+
+.dragon {
+  background-color: rgb(250, 220, 181);
+}
+
+.dark {
+  background-color: rgb(216, 181, 181);
+}
+
+.steel {
+  background-color: rgb(224, 236, 236);
 }
