@@ -40,4 +40,11 @@ async function showCard(id) {
     let url = `https://pokeapi.co/api/v2/pokemon/${id}/`
     let pokemonData = await fetchPokemon(url);
     console.log(pokemonData);
+    
+}
+
+function showModal() {
+    let myModal = new bootstrap.Modal(document.getElementById('pokeModal'), {});
+
+    myModal.show();
 }

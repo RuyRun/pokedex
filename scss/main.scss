@@ -31,7 +31,7 @@ body {
         .card-body {
             padding: 4rem 1rem 1rem;
             // font-family: 'Londrina Shadow', cursive;
-            
+
 
             .pokemon-name {
                 background-color: #ffffff59;
@@ -66,6 +66,7 @@ body {
     .modal-content {
         background-color: #94EE94;
     }
+
     img {
         width: 100%;
         height: auto;
@@ -76,10 +77,16 @@ body {
     }
 
     .modal-body {
+        .row {
+            justify-content: center;
+        }
+        .card-img {
+            width: 70%;
+        }
         .typeOfPokemon {
             align-items: center;
             text-align: center;
-           
+
             .row {
                 align-items: center;
                 justify-content: center;
@@ -95,11 +102,13 @@ body {
                     margin-top: -32px;
                 }
             }
-        }        
+        }
     }
+
     .modal-header {
         padding-bottom: 0px !important;
     }
+
     .modal-body {
         padding-top: 0px !important;
     }
@@ -110,22 +119,59 @@ body {
         border-top-right-radius: 50% 30px;
         justify-content: center;
         flex-direction: column;
-        &>*{
+
+        &>* {
             margin: 0px;
         }
+
         .nav {
             display: flex;
             justify-content: space-around;
             width: 100%;
             margin-top: 4px;
+            .active {
+                font-weight: 800;
+            }
+            p {
+                border-bottom: 1px solid rgba(0, 0, 0, 0);
+                cursor: pointer;
+                &:hover {
+                    border-bottom: 1px solid black;
+                }
+            }
+            i {
+                cursor: pointer;
+                color: rgba(128, 128, 128, 0.432);
+                font-size: 24px;
+                &:hover {
+                    color: black;
+                    font-weight: bolder;
+                }
+            }
         }
+
         .modal-nav-content {
             width: 100%;
+
             .bar {
                 margin-bottom: 16px;
-                &>*{
+
+                &>* {
                     margin: 0;
                 }
+            }
+        }
+
+        .moves {
+            max-height: 200px;
+            overflow-y: scroll;
+            padding-left: 8px;
+            justify-content: center;
+            .move {
+                background-color: rgba(201, 199, 199, 0.2);
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                margin: 3px;
+                border-radius: 10px;
             }
         }
     }
